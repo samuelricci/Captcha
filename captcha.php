@@ -8,7 +8,7 @@ header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Cache-Control: post-check=0, pre-checked=0", false);
 header("Pragma: no-cache");
 
-$chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 $randomString = '';
 
 for ( $i = 0; $i < 6; $i++ ) {
@@ -17,10 +17,12 @@ for ( $i = 0; $i < 6; $i++ ) {
 
 $_SESSION['captcha'] = strtolower();
 
-//Create and insert captcha background here
-// $im = @imagecreatfrompng( "" );
+/*Create and insert captcha background here
+ $im = @imagecreatefrompng( "" ); */
 
 imagettftext($im, 30, 0, 10, 38, imagecolorallocate ($im, 0, 0, 0), 'larabiefont.tff', $randomString);
+
+/* test rand(); for weights */
 
 header( "Content-type: image/png");
 imagepng($im, NULL, 0);
