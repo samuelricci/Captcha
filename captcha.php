@@ -20,7 +20,7 @@ $_SESSION['captcha'] = strtolower( $randomString );
 
 $im = @imagecreatefrompng('background.png');
 
-    imagettftext($im, 30, 0, 10, 38, imagecolorallocate ($im, 0, 0, 0), 'larabiefont.ttf', $randomString);
+    imagettftext($im, 30, 0, 10, 38, imagecolorallocate ($im, 0, 0, 0), 'ComingSoon.ttf', $randomString);
 
 /* test rand(); for weights */
 
