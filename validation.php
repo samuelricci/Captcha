@@ -2,7 +2,7 @@
 
 /* captcha validation */
 
-sesson_start();
+session_start();
 
 if(strtolower($_POST['answer']) == $_SESSION['captcha'])
     echo 'Good news everybody! The captcha worked. (\/)o_o(\/)';
@@ -13,4 +13,4 @@ else
 
 unset($_SESSION['captcha']);
 
- 
+?>

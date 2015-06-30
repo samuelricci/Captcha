@@ -1,7 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
         <title>This be a test</title>
-        <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
@@ -9,7 +12,8 @@
             <img src="captcha.php" />
             <form action="validation.php" method="post">
                 <input type="text" name="answer" placeholder="Enter captcha here" />
-                <input type="submit" value="CHECK" /> 
+                <input type="submit" value="CHECK" />
+                <input type="button" onclick="window.location.href = window.location.href" value="Reload" />
             </form>
         </div>
     </body>
